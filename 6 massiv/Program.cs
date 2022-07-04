@@ -9,8 +9,9 @@ namespace _6_massiv
             int maxRandomNamber = 100;
             int minRandomNamber = 10;
             int minNumberInArray = int.MaxValue;
+            int numberOrderInArray = 0;
             int[] userInputArray = new int[30];
-            int[] firstTempArray = new int[0];
+            int[] firstTempArray = new int[userInputArray.Length];
             
 
             Random random = new Random();
@@ -25,7 +26,7 @@ namespace _6_massiv
                 Console.Write(userInputArray[i] + " ");
             }
 
-            while(firstTempArray.Length < userInputArray.Length)
+            while(numberOrderInArray < userInputArray.Length)
             {
                 
                 int numberRepitInArray = 0;
@@ -41,15 +42,8 @@ namespace _6_massiv
                 {
                     for (int i = 0; i < numberRepitInArray; i++)
                     {
-                        int[] secondTempArray = new int[firstTempArray.Length + 1];
-
-                        for (int j = 0; j < firstTempArray.Length; j++)
-                        {
-                            secondTempArray[j] = firstTempArray[j];
-                        }
-
-                        secondTempArray[secondTempArray.Length - 1] = minNumberInArray;
-                        firstTempArray = secondTempArray;
+                        firstTempArray[numberOrderInArray] = minNumberInArray;
+                        numberOrderInArray++;
                     }
                 }
                 minNumberInArray++;
