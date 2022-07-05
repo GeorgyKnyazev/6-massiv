@@ -31,10 +31,6 @@ namespace _6_massiv
                         minNumberInArray = userInputArray[j];
                         numberOrderInArray = j;
                     }
-                    else
-                    {
-                        continue;
-                    }
                 }
                 tempNumber = userInputArray[i];
                 userInputArray[i] = minNumberInArray;
